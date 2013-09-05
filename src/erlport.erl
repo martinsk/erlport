@@ -246,7 +246,7 @@ print(Data, State) ->
 %%
 spawn_call(Id, Module, Function, Args) ->
     proc_lib:spawn_link(fun () ->
-        exit({Id, call_mfa(Module, Function, Args)})
+        {Id, call_mfa(Module, Function, Args)}
         end).
 
 %%
